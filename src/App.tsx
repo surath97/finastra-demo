@@ -8,6 +8,7 @@ import { LuCircleCheck, LuCircleDashed } from 'react-icons/lu'
 
 import EventOverview from './components/EventOverview'
 import ReasonList from './components/ReasonList'
+import OurSpeackers from './components/OurSpeackers'
 
 
 function App() {
@@ -33,7 +34,7 @@ function App() {
       <ReasonList />
 
       {/* Section 4 */}
-      
+      <OurSpeackers />
 
     </Box>
   )
