@@ -1,1 +1,12 @@
 @import "tailwindcss";
+
+.bg_img {
+  background-image: url(https://res.cloudinary.com/dbyioi2qq/q_auto/v1711694351/static/lightpng_1711694345_16780.png);
+  background-position: 50% 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-origin: padding-box;
+  position: relative;
+}
