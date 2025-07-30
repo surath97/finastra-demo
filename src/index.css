@@ -10,3 +10,7 @@
   background-origin: padding-box;
   position: relative;
 }
+
+.bg_gradient_1 {
+  background: linear-gradient(84deg, #1c015d -7.52%, #8045ce 108.41%);
+}
