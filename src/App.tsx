@@ -10,6 +10,7 @@ import EventOverview from './components/EventOverview'
 import ReasonList from './components/ReasonList'
 import OurSpeackers from './components/OurSpeackers'
 import Agenda from './components/Agenda'
+import About from './components/About'
 
 
 function App() {
@@ -39,6 +40,9 @@ function App() {
 
       {/* Section 5 */}
       <Agenda />
+
+      {/* Section 5 */}
+      <About />
 
     </Box>
   )
