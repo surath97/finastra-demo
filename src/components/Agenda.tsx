@@ -14,9 +14,14 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import type { Ref } from "react";
 import { LuPen, LuTicket, LuX } from "react-icons/lu";
 
-const Agenda = () => {
+interface Props {
+  refElement?: Ref<HTMLDivElement>;
+}
+
+const Agenda = ({ refElement }: Props) => {
 
   const MotionBox = motion(Box);
   const MotionTimelineItem = motion(Timeline.Item);
@@ -174,7 +179,7 @@ const Agenda = () => {
           </h1>
         </GridItem>
 
-        <GridItem colSpan={{ sm: 1, xl: 3 }}>
+        <GridItem colSpan={{ sm: 1, xl: 3 }} ref={refElement}>
 
           <Timeline.Root size="xl" variant="subtle">
 

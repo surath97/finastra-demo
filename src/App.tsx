@@ -1,24 +1,48 @@
-import { Box, GridItem, HStack, Image, List, SimpleGrid, VStack } from '@chakra-ui/react'
-import { motion } from 'framer-motion'
+import { Box } from '@chakra-ui/react'
 import './App.css'
 import NavBar from './components/NavBar'
 import OrganizeBySection from './components/OrganizeBySection'
-import img_1 from './assets/other_images/Finastra-UB-Egypt-Benefits-of-attending SMALL.jpg'
-import { LuCircleCheck, LuCircleDashed } from 'react-icons/lu'
 
-import EventOverview from './components/EventOverview'
-import ReasonList from './components/ReasonList'
-import OurSpeackers from './components/OurSpeackers'
-import Agenda from './components/Agenda'
 import About from './components/About'
+import Agenda from './components/Agenda'
+import EventOverview from './components/EventOverview'
 import Footer from './components/Footer'
-import Register from './components/Register'
+import OurSpeackers from './components/OurSpeackers'
+import ReasonList from './components/ReasonList'
+import { useState, useRef } from 'react'
 
 
 function App() {
 
 
-  
+  const targetRef1 = useRef<HTMLDivElement>(null);
+  const targetRef2 = useRef<HTMLDivElement>(null);
+
+  const handleScroll1 = () => {
+
+    // Scroll to the bottom of the page
+    if (targetRef1.current) {
+      window.scrollTo({
+        // top: document.body.scrollHeight,
+        top: targetRef1.current.offsetTop,
+        behavior: 'smooth',
+      });
+    }
+
+  };
+
+  const handleScroll2 = () => {
+
+    // Scroll to the bottom of the page
+    if (targetRef2.current) {
+      window.scrollTo({
+        // top: document.body.scrollHeight,
+        top: targetRef2.current.offsetTop,
+        behavior: 'smooth',
+      });
+    }
+
+  };
   
 
   return (
@@ -27,12 +51,12 @@ function App() {
 
       {/* Section 1 */}
       <Box className='bg_img' >
-        <NavBar />
+        <NavBar onClickBtn={() => handleScroll1()} onClickBtn2={() => handleScroll2()} />
         <OrganizeBySection />
       </Box>
 
       {/* Section 2 */}
-      <EventOverview />
+      <EventOverview refElement={targetRef1} />
 
       {/* Section 3 */}
       <ReasonList />
@@ -41,7 +65,7 @@ function App() {
       <OurSpeackers />
 
       {/* Section 5 */}
-      <Agenda />
+      <Agenda refElement={targetRef2} />
 
       {/* Section 5 */}
       <About />

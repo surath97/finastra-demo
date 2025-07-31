@@ -8,8 +8,14 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import type { ReactNode, Ref } from "react";
 
-const EventOverview = () => {
+
+interface Props {
+  refElement?: Ref<HTMLDivElement>;
+}
+
+const EventOverview = ({ refElement }: Props) => {
 
   const MotionGridItem = motion(GridItem);
 
@@ -35,7 +41,7 @@ const EventOverview = () => {
       paddingY="80px"
     >
       {/* <OrganizeBySection /> */}
-      <SimpleGrid columns={1}>
+      <SimpleGrid columns={1} ref={refElement}>
         <MotionGridItem
           colSpan={1}
           textAlign="center"
