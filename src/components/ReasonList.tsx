@@ -36,7 +36,7 @@ const ReasonList = () => {
     visible: {
       opacity: 1, x: 0, transition: { 
         duration: 0.8,
-        delay: 0.2
+        delay: 0.3
       } 
     },
   };
@@ -46,7 +46,7 @@ const ReasonList = () => {
     visible: {
       opacity: 1, x: 0, transition: { 
         duration: 0.8,
-        delay: 0.3
+        delay: 0.5
       } 
     },
   };
@@ -56,7 +56,7 @@ const ReasonList = () => {
     visible: {
       opacity: 1, x: 0, transition: { 
         duration: 0.8,
-        delay: 0.4
+        delay: 0.7
       } 
     },
   };
@@ -66,7 +66,7 @@ const ReasonList = () => {
     visible: {
       opacity: 1, x: 0, transition: { 
         duration: 0.8,
-        delay: 0.5
+        delay: 0.9
       } 
     },
   };
