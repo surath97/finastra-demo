@@ -11,6 +11,7 @@ import ReasonList from './components/ReasonList'
 import OurSpeackers from './components/OurSpeackers'
 import Agenda from './components/Agenda'
 import About from './components/About'
+import Footer from './components/Footer'
 
 
 function App() {
@@ -43,6 +44,9 @@ function App() {
 
       {/* Section 5 */}
       <About />
+
+      {/* Section 6 */}
+      <Footer />
 
     </Box>
   )
