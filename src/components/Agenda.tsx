@@ -154,6 +154,7 @@ const Agenda = ({ refElement }: Props) => {
       paddingY="80px" 
       paddingX={2} 
       bg={'white'}
+      ref={refElement}
       // ------------
       initial='hidden' 
       variants={fadeIn} 
@@ -179,7 +180,7 @@ const Agenda = ({ refElement }: Props) => {
           </h1>
         </GridItem>
 
-        <GridItem colSpan={{ sm: 1, xl: 3 }} ref={refElement}>
+        <GridItem colSpan={{ sm: 1, xl: 3 }} >
 
           <Timeline.Root size="xl" variant="subtle">
 

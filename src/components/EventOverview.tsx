@@ -39,9 +39,10 @@ const EventOverview = ({ refElement }: Props) => {
       margin="auto"
       paddingX={4}
       paddingY="80px"
+      ref={refElement}
     >
       {/* <OrganizeBySection /> */}
-      <SimpleGrid columns={1} ref={refElement}>
+      <SimpleGrid columns={1}>
         <MotionGridItem
           colSpan={1}
           textAlign="center"

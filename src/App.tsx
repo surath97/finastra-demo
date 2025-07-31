@@ -10,6 +10,7 @@ import Footer from './components/Footer'
 import OurSpeackers from './components/OurSpeackers'
 import ReasonList from './components/ReasonList'
 import { useState, useRef } from 'react'
+import Register from './components/Register'
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
 
   const targetRef1 = useRef<HTMLDivElement>(null);
   const targetRef2 = useRef<HTMLDivElement>(null);
+  const targetRef3 = useRef<HTMLDivElement>(null);
 
   const handleScroll1 = () => {
 
@@ -43,6 +45,19 @@ function App() {
     }
 
   };
+
+  const handleScroll3 = () => {
+
+    // Scroll to the bottom of the page
+    if (targetRef3.current) {
+      window.scrollTo({
+        // top: document.body.scrollHeight,
+        top: targetRef3.current.offsetTop,
+        behavior: 'smooth',
+      });
+    }
+
+  };
   
 
   return (
@@ -51,7 +66,7 @@ function App() {
 
       {/* Section 1 */}
       <Box className='bg_img' >
-        <NavBar onClickBtn={() => handleScroll1()} onClickBtn2={() => handleScroll2()} />
+        <NavBar onClickBtn={() => handleScroll1()} onClickBtn2={() => handleScroll2()} onClickBtn3={() => handleScroll3()} />
         <OrganizeBySection />
       </Box>
 
@@ -71,7 +86,7 @@ function App() {
       <About />
 
       {/* Section 6 */}
-      {/* <Register /> */}
+      <Register refElement={targetRef3} />
 
       {/* Last Section */}
       <Footer />

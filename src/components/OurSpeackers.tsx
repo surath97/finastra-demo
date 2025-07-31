@@ -69,7 +69,7 @@ const OurSpeackers = () => {
                   </Card.Description>
                   <HStack mt="4">
                     <Badge>Finastra</Badge>
-                    <Badge>Caffeine</Badge>
+                    <Badge>IT</Badge>
                   </HStack>
                 </Card.Body>
               </Box>
