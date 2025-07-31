@@ -97,9 +97,11 @@ const ReasonList = () => {
         borderRadius="30px"
         initial='hidden' variants={topAnimation} whileInView='visible' viewport={{ once: false }}
       >
-        <HStack padding={10} gap={5}>
-          <Image src={img_1} borderRadius="30px" width="50%" />
-          <Box className="text-white">
+        <SimpleGrid padding={10} gap={5} columns={{ base: 1, lg: 2}}>
+          <GridItem>
+            <Image src={img_1} borderRadius="30px" objectFit="cover" />
+          </GridItem>
+          <GridItem className="text-white">
             <VStack>
               <h3 className="!text-[1.7rem]">
                 TOP REASONS WHY THIS IS THE ONLY CONFERENCE YOU NEED TO ATTEND
@@ -148,8 +150,8 @@ const ReasonList = () => {
                 </MotionListItem>
               </List.Root>
             </VStack>
-          </Box>
-        </HStack>
+          </GridItem>
+        </SimpleGrid>
       </MotionBox>
     </Box>
   );

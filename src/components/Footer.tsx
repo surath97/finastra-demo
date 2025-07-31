@@ -36,7 +36,7 @@ const Footer = () => {
         columns={{ sm: 1, xl: 2 }}
         gap={10}
         width="95%"
-        paddingX={20}
+        paddingX={{ base: 4, md:6, lg:10, xl:20}}
       >
         <GridItem color={"white"}>
           <Heading size={"2xl"} paddingY={5}>Cogent Solutions™</Heading>
@@ -47,10 +47,10 @@ const Footer = () => {
           </Text>
           <Heading size={"2xl"} paddingY={5}>Awards</Heading>
           <HStack>
-            <Image src={img1} boxSize="120px" />
-            <Image src={img2} boxSize="120px" />
-            <Image src={img3} boxSize="120px" />
-            <Image src={img4} height="120px" width="auto" />
+            <Image src={img1} boxSize="20%" />
+            <Image src={img2} boxSize="20%" />
+            <Image src={img3} boxSize="20%" />
+            <Image src={img4} boxSize="12.5%"  />
           </HStack>
         </GridItem>
 

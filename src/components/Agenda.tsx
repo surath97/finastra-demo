@@ -11,6 +11,7 @@ import {
   SimpleGrid,
   Text,
   HStack,
+  VStack,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { LuPen, LuTicket, LuX } from "react-icons/lu";
@@ -157,7 +158,7 @@ const Agenda = () => {
 
       <SimpleGrid
         marginX="auto"
-        columns={{ sm: 1, xl: 3 }}
+        columns={{ sm: 1, xl: 4 }}
         gap={10}
         width="95%"
       >
@@ -173,7 +174,7 @@ const Agenda = () => {
           </h1>
         </GridItem>
 
-        <GridItem colSpan={{ sm: 1, xl: 2 }}>
+        <GridItem colSpan={{ sm: 1, xl: 3 }}>
 
           <Timeline.Root size="xl" variant="subtle">
 
@@ -198,11 +199,16 @@ const Agenda = () => {
                     <Avatar.Image src="https://i.pravatar.cc/150?u=a" />
                     <Avatar.Fallback />
                   </Avatar.Root> */}
-                  <HStack width={'100%'}>
-                    <Text width={'15%'} fontSize={'2xl'}>09.30 AM</Text>
+                  <HStack hideBelow='md' width={'100%'}>
+                    <Text width={'15%'} fontSize={{ base: 'sm', lg: 'lg', xl: '2xl'}}>09.30 AM</Text>
                     <Span width={'auto'} marginX={1} />
-                    <Text width={'80%'} fontSize={'xl'}>Registration & Welcome Coffee</Text>
+                    <Text width={'80%'} fontSize={{ base: 'sm', md: 'md', lg: 'lg', xl: 'xl'}}>Registration & Welcome Coffee</Text>
                   </HStack>
+                  <VStack hideFrom='md' width={'100%'} alignItems={'flex-start'}>
+                    <Text fontSize={{ base: 'sm', lg: 'lg', xl: '2xl'}}>09.30 AM</Text>
+                    <Span marginX={1} />
+                    <Text fontSize={{ base: 'sm', md: 'md', lg: 'lg', xl: 'xl'}}>Registration & Welcome Coffee</Text>
+                  </VStack>
                 </Timeline.Title>
               </Timeline.Content>
             </MotionTimelineItem>
@@ -228,11 +234,16 @@ const Agenda = () => {
                     <Avatar.Image src="https://i.pravatar.cc/150?u=a" />
                     <Avatar.Fallback />
                   </Avatar.Root> */}
-                  <HStack width={'100%'}>
-                    <Text width={'15%'} fontSize={'2xl'}>10.00 AM</Text>
+                  <HStack hideBelow='md' width={'100%'}>
+                    <Text width={'15%'} fontSize={{ base: 'sm', lg: 'lg', xl: '2xl'}}>10.00 AM</Text>
                     <Span width={'auto'} marginX={1} />
-                    <Text width={'80%'} fontSize={'xl'}>Opening Remarks</Text>
+                    <Text width={'80%'} fontSize={{ base: 'sm', md: 'md', lg: 'lg', xl: 'xl'}}>Opening Remarks</Text>
                   </HStack>
+                  <VStack hideFrom='md' alignItems={'flex-start'} width={'100%'}>
+                    <Text fontSize={{ base: 'sm', lg: 'lg', xl: '2xl'}}>10.00 AM</Text>
+                    <Span marginX={1} />
+                    <Text fontSize={{ base: 'sm', md: 'md', lg: 'lg', xl: 'xl'}}>Opening Remarks</Text>
+                  </VStack>
                 </Timeline.Title>
               </Timeline.Content>
             </MotionTimelineItem>
@@ -258,11 +269,16 @@ const Agenda = () => {
                     <Avatar.Image src="https://i.pravatar.cc/150?u=a" />
                     <Avatar.Fallback />
                   </Avatar.Root> */}
-                  <HStack width={'100%'}>
-                    <Text width="15%" fontSize={'2xl'}>10.10 AM</Text>
+                  <HStack hideBelow='md' width={'100%'}>
+                    <Text width="15%" fontSize={{ base: 'sm', lg: 'lg', xl: '2xl'}}>10.10 AM</Text>
                     <Span width={'auto'} marginX={1} />
-                    <Text width={'80%'} fontSize={'xl'}>Keynote session: Digital Transformation in a Gen AI World</Text>
+                    <Text width={'80%'} fontSize={{ base: 'sm', md: 'md', lg: 'lg', xl: 'xl'}}>Keynote session: Digital Transformation in a Gen AI World</Text>
                   </HStack>
+                  <VStack hideFrom='md' alignItems={'flex-start'} width={'100%'}>
+                    <Text fontSize={{ base: 'sm', lg: 'lg', xl: '2xl'}}>10.10 AM</Text>
+                    <Span marginX={1} />
+                    <Text fontSize={{ base: 'sm', md: 'md', lg: 'lg', xl: 'xl'}}>Keynote session: Digital Transformation in a Gen AI World</Text>
+                  </VStack>
                 </Timeline.Title>
                 <Span color="fg.muted">Ms. Siobhan Byron, Executive Vice President, Finastra Universal Banking</Span>
               </Timeline.Content>
@@ -289,11 +305,16 @@ const Agenda = () => {
                     <Avatar.Image src="https://i.pravatar.cc/150?u=a" />
                     <Avatar.Fallback />
                   </Avatar.Root> */}
-                  <HStack width={'100%'}>
-                    <Text width="15%" fontSize={'2xl'}>10.30 AM</Text>
+                  <HStack hideBelow='md' width={'100%'}>
+                    <Text width="15%" fontSize={{ base: 'sm', lg: 'lg', xl: '2xl'}}>10.30 AM</Text>
                     <Span width={'auto'} marginX={1} />
-                    <Text width={'80%'} fontSize={'xl'}>Decoding the Future - Transformation: The Opportunity & Time is Now</Text>
+                    <Text width={'80%'} fontSize={{ base: 'sm', md: 'md', lg: 'lg', xl: 'xl'}}>Decoding the Future - Transformation: The Opportunity & Time is Now</Text>
                   </HStack>
+                   <VStack hideFrom='md' alignItems={'flex-start'} width={'100%'}>
+                    <Text fontSize={{ base: 'sm', lg: 'lg', xl: '2xl'}}>10.30 AM</Text>
+                    <Span marginX={1} />
+                    <Text fontSize={{ base: 'sm', md: 'md', lg: 'lg', xl: 'xl'}}>Decoding the Future - Transformation: The Opportunity & Time is Now</Text>
+                  </VStack>
                 </Timeline.Title>
                 <Span color="fg.muted">Mr. Daragh O'Byrne, Senior Director, Marketing, Universal Banking, Finastra</Span>
               </Timeline.Content>
@@ -320,11 +341,16 @@ const Agenda = () => {
                     <Avatar.Image src="https://i.pravatar.cc/150?u=a" />
                     <Avatar.Fallback />
                   </Avatar.Root> */}
-                  <HStack width={'100%'}>
-                    <Text width="15%" fontSize={'2xl'}>11.00 AM</Text>
+                  <HStack hideBelow='md' width={'100%'}>
+                    <Text width="15%" fontSize={{ base: 'sm', lg: 'lg', xl: '2xl'}}>11.00 AM</Text>
                     <Span width={'auto'} marginX={1} />
-                    <Text width={'80%'} fontSize={'xl'}>Panel Discussion: Customer Acquisition - Gaining New Customers in a Hyper Competitive World</Text>
+                    <Text width={'80%'} fontSize={{ base: 'sm', md: 'md', lg: 'lg', xl: 'xl'}}>Panel Discussion: Customer Acquisition - Gaining New Customers in a Hyper Competitive World</Text>
                   </HStack>
+                   <VStack hideFrom='md' alignItems={'flex-start'} width={'100%'}>
+                    <Text fontSize={{ base: 'sm', lg: 'lg', xl: '2xl'}}>11.00 AM</Text>
+                    <Span marginX={1} />
+                    <Text fontSize={{ base: 'sm', md: 'md', lg: 'lg', xl: 'xl'}}>Panel Discussion: Customer Acquisition - Gaining New Customers in a Hyper Competitive World</Text>
+                  </VStack>
                 </Timeline.Title>
                 <Card.Root size="md" variant={'elevated'}>
                   <Card.Body textStyle="md" lineHeight="tall">
@@ -362,11 +388,16 @@ const Agenda = () => {
                     <Avatar.Image src="https://i.pravatar.cc/150?u=a" />
                     <Avatar.Fallback />
                   </Avatar.Root> */}
-                  <HStack width={'100%'}>
-                    <Text width="15%" fontSize={'2xl'}>11.30 AM</Text>
+                  <HStack hideBelow='md' width={'100%'}>
+                    <Text width="15%" fontSize={{ base: 'sm', lg: 'lg', xl: '2xl'}}>11.30 AM</Text>
                     <Span width={'auto'} marginX={1} />
-                    <Text width={'80%'} fontSize={'xl'}>Panel Discussion: Customer Retention - Keeping Customers When Loyalty Is Dead</Text>
+                    <Text width={'80%'} fontSize={{ base: 'sm', md: 'md', lg: 'lg', xl: 'xl'}}>Panel Discussion: Customer Retention - Keeping Customers When Loyalty Is Dead</Text>
                   </HStack>
+                   <VStack hideFrom='md' alignItems={'flex-start'} width={'100%'}>
+                    <Text fontSize={{ base: 'sm', lg: 'lg', xl: '2xl'}}>11.30 AM</Text>
+                    <Span marginX={1} />
+                    <Text fontSize={{ base: 'sm', md: 'md', lg: 'lg', xl: 'xl'}}>Panel Discussion: Customer Retention - Keeping Customers When Loyalty Is Dead</Text>
+                  </VStack>
                 </Timeline.Title>
                 <Card.Root size="md" variant={'elevated'}>
                   <Card.Body textStyle="md" lineHeight="tall">
@@ -404,11 +435,16 @@ const Agenda = () => {
                     <Avatar.Image src="https://i.pravatar.cc/150?u=a" />
                     <Avatar.Fallback />
                   </Avatar.Root> */}
-                  <HStack width={'100%'}>
-                    <Text width="15%" fontSize={'2xl'}>12.00 AM</Text>
+                  <HStack hideBelow='md' width={'100%'}>
+                    <Text width="15%" fontSize={{ base: 'sm', lg: 'lg', xl: '2xl'}}>12.00 PM</Text>
                     <Span width={'auto'} marginX={1} />
-                    <Text width={'80%'} fontSize={'xl'}>Coffee Break & Networking</Text>
+                    <Text width={'80%'} fontSize={{ base: 'sm', md: 'md', lg: 'lg', xl: 'xl'}}>Coffee Break & Networking</Text>
                   </HStack>
+                   <VStack hideFrom='md' alignItems={'flex-start'} width={'100%'}>
+                    <Text fontSize={{ base: 'sm', lg: 'lg', xl: '2xl'}}>12.00 PM</Text>
+                    <Span marginX={1} />
+                    <Text fontSize={{ base: 'sm', md: 'md', lg: 'lg', xl: 'xl'}}>Coffee Break & Networking</Text>
+                  </VStack>
                 </Timeline.Title>
               </Timeline.Content>
             </MotionTimelineItem>
@@ -434,11 +470,16 @@ const Agenda = () => {
                     <Avatar.Image src="https://i.pravatar.cc/150?u=a" />
                     <Avatar.Fallback />
                   </Avatar.Root> */}
-                  <HStack width={'100%'}>
-                    <Text width="15%" fontSize={'2xl'}>12.30 AM</Text>
+                  <HStack hideBelow='md' width={'100%'}>
+                    <Text width="15%" fontSize={{ base: 'sm', lg: 'lg', xl: '2xl'}}>12.30 PM</Text>
                     <Span width={'auto'} marginX={1} />
-                    <Text width={'80%'} fontSize={'xl'}>Panel Discussion: Cost to Serve: Deliver Customer Delight</Text>
+                    <Text width={'80%'} fontSize={{ base: 'sm', md: 'md', lg: 'lg', xl: 'xl'}}>Panel Discussion: Cost to Serve: Deliver Customer Delight</Text>
                   </HStack>
+                  <VStack hideFrom='md' alignItems={'flex-start'} width={'100%'}>
+                    <Text fontSize={{ base: 'sm', lg: 'lg', xl: '2xl'}}>12.30 PM</Text>
+                    <Span marginX={1} />
+                    <Text fontSize={{ base: 'sm', md: 'md', lg: 'lg', xl: 'xl'}}>Panel Discussion: Cost to Serve: Deliver Customer Delight</Text>
+                  </VStack>
                 </Timeline.Title>
                 <Card.Root size="md" variant={'elevated'}>
                   <Card.Body textStyle="md" lineHeight="tall">
@@ -477,11 +518,16 @@ const Agenda = () => {
                     <Avatar.Image src="https://i.pravatar.cc/150?u=a" />
                     <Avatar.Fallback />
                   </Avatar.Root> */}
-                  <HStack width={'100%'}>
-                    <Text width="15%" fontSize={'2xl'}>01.00 AM</Text>
+                  <HStack hideBelow='md' width={'100%'}>
+                    <Text width="15%" fontSize={{ base: 'sm', lg: 'lg', xl: '2xl'}}>01.00 PM</Text>
                     <Span width={'auto'} marginX={1} />
-                    <Text width={'80%'} fontSize={'xl'}>The Essential Elements: What do you need to be "all things to all people"?</Text>
+                    <Text width={'80%'} fontSize={{ base: 'sm', md: 'md', lg: 'lg', xl: 'xl'}}>The Essential Elements: What do you need to be "all things to all people"?</Text>
                   </HStack>
+                   <VStack hideFrom='md' alignItems={'flex-start'} width={'100%'}>
+                    <Text fontSize={{ base: 'sm', lg: 'lg', xl: '2xl'}}>01.00 PM</Text>
+                    <Span marginX={1} />
+                    <Text fontSize={{ base: 'sm', md: 'md', lg: 'lg', xl: 'xl'}}>The Essential Elements: What do you need to be "all things to all people"?</Text>
+                  </VStack>
                 </Timeline.Title>
                 <Span color="fg.muted">Narendra Mistry, Chief Product and Technology Officer, Finastra Universal Banking</Span>
               </Timeline.Content>
@@ -508,11 +554,16 @@ const Agenda = () => {
                     <Avatar.Image src="https://i.pravatar.cc/150?u=a" />
                     <Avatar.Fallback />
                   </Avatar.Root> */}
-                  <HStack width={'100%'}>
-                    <Text width="15%" fontSize={'2xl'}>01.30 AM</Text>
+                  <HStack hideBelow='md' width={'100%'}>
+                    <Text width="15%" fontSize={{ base: 'sm', lg: 'lg', xl: '2xl'}}>01.30 PM</Text>
                     <Span width={'auto'} marginX={1} />
-                    <Text width={'80%'} fontSize={'xl'}>Making the case for change: The Question is How</Text>
+                    <Text width={'80%'} fontSize={{ base: 'sm', md: 'md', lg: 'lg', xl: 'xl'}}>Making the case for change: The Question is How</Text>
                   </HStack>
+                  <VStack hideFrom='md' alignItems={'flex-start'} width={'100%'}>
+                    <Text fontSize={{ base: 'sm', lg: 'lg', xl: '2xl'}}>01.30 PM</Text>
+                    <Span marginX={1} />
+                    <Text fontSize={{ base: 'sm', md: 'md', lg: 'lg', xl: 'xl'}}>Making the case for change: The Question is How</Text>
+                  </VStack>
                 </Timeline.Title>
                 <Span color="fg.muted">Marwan Abouzeid, Principal Solutions Consultant & Customer Value Lead, MEA & APAC, Finastra Universal Banking</Span>
               </Timeline.Content>
@@ -539,11 +590,16 @@ const Agenda = () => {
                     <Avatar.Image src="https://i.pravatar.cc/150?u=a" />
                     <Avatar.Fallback />
                   </Avatar.Root> */}
-                  <HStack width={'100%'}>
-                    <Text width="15%" fontSize={'2xl'}>01.50 AM</Text>
+                  <HStack hideBelow='md' width={'100%'}>
+                    <Text width="15%" fontSize={{ base: 'sm', lg: 'lg', xl: '2xl'}}>01.50 PM</Text>
                     <Span width={'auto'} marginX={1} />
-                    <Text width={'80%'} fontSize={'xl'}>Closing Remarks</Text>
+                    <Text width={'80%'} fontSize={{ base: 'sm', md: 'md', lg: 'lg', xl: 'xl'}}>Closing Remarks</Text>
                   </HStack>
+                  <VStack hideFrom='md' alignItems={'flex-start'} width={'100%'}>
+                    <Text fontSize={{ base: 'sm', lg: 'lg', xl: '2xl'}}>01.50 PM</Text>
+                    <Span marginX={1} />
+                    <Text fontSize={{ base: 'sm', md: 'md', lg: 'lg', xl: 'xl'}}>Closing Remarks</Text>
+                  </VStack>
                 </Timeline.Title>
                 <Span color="fg.muted">Rudy Kawmi, Managing Director - Middle East, Africa & Asia-Pacific, Finastra Universal Banking</Span>
               </Timeline.Content>
@@ -570,11 +626,16 @@ const Agenda = () => {
                     <Avatar.Image src="https://i.pravatar.cc/150?u=a" />
                     <Avatar.Fallback />
                   </Avatar.Root> */}
-                  <HStack width={'100%'}>
-                    <Text width="15%" fontSize={'2xl'}>02.00 AM</Text>
+                  <HStack hideBelow='md' width={'100%'}>
+                    <Text width="15%" fontSize={{ base: 'sm', lg: 'lg', xl: '2xl'}}>02.00 PM</Text>
                     <Span width={'auto'} marginX={1} />
-                    <Text width={'80%'} fontSize={'xl'}>Lunch</Text>
+                    <Text width={'80%'} fontSize={{ base: 'sm', md: 'md', lg: 'lg', xl: 'xl'}}>Lunch</Text>
                   </HStack>
+                  <VStack hideFrom='md' alignItems={'flex-start'} width={'100%'}>
+                    <Text fontSize={{ base: 'sm', lg: 'lg', xl: '2xl'}}>02.00 PM</Text>
+                    <Span marginX={1} />
+                    <Text fontSize={{ base: 'sm', md: 'md', lg: 'lg', xl: 'xl'}}>Coffee Break & Networking</Text>
+                  </VStack>
                 </Timeline.Title>
               </Timeline.Content>
             </MotionTimelineItem>

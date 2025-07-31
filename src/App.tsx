@@ -12,12 +12,13 @@ import OurSpeackers from './components/OurSpeackers'
 import Agenda from './components/Agenda'
 import About from './components/About'
 import Footer from './components/Footer'
+import Register from './components/Register'
 
 
 function App() {
 
 
-
+  
   
 
   return (
@@ -46,6 +47,9 @@ function App() {
       <About />
 
       {/* Section 6 */}
+      {/* <Register /> */}
+
+      {/* Last Section */}
       <Footer />
 
     </Box>
