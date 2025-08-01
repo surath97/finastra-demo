@@ -1,4 +1,5 @@
 import {
+    Alert,
   Box,
   Button,
   Checkbox,
@@ -9,10 +10,12 @@ import {
   Link,
   SimpleGrid,
   Stack,
-  Text,
+  Text
 } from "@chakra-ui/react";
-import type { Ref } from "react";
+import axios from "axios";
+import { useState, type Ref } from "react";
 import { useForm, type FieldErrors, type FieldValues } from "react-hook-form";
+import { Toaster, toaster } from "./ui/toaster"
 
 interface Props {
   refElement?: Ref<HTMLDivElement>;
@@ -23,8 +26,40 @@ const Register = ({ refElement }: Props) => {
   const { register, handleSubmit, formState: { errors }, reset } = useForm();
 
   const submitfn = (data: FieldValues) => {
+
     console.log(data);
-    reset();
+
+    axios.post('http://finastra-backend.test/api/contacts', data)
+      .then((res) => {
+
+        console.log(res);
+
+        toaster.success({
+          title: "Registered successful",
+          description: `Contact ${res.data.data.fname} saved successfully..!`,
+          // action: {
+          //   label: "Undo",
+          //   onClick: () => console.log("Undo"),
+          // },
+          duration: 6000,
+          closable: true
+        })
+        
+      })
+      .catch((err) => {
+
+        console.log(err);
+
+        toaster.create({
+          type: 'error',
+          title: 'Error',
+          description: `${err.message}`,
+          closable: true,
+        });
+
+      })
+      .finally(() => reset())
+
   }
 
   const errorHandleFn = (err: FieldErrors<FieldValues>) => {
@@ -34,6 +69,9 @@ const Register = ({ refElement }: Props) => {
   return (
 
     <Box className="!bg-linear-to-r from-indigo-300 via-purple-300 to-pink-300" paddingY='100px' ref={refElement}>
+
+      <Toaster />
+
       <SimpleGrid
         marginX="auto"
         columns={{ sm: 1, xl: 3 }}
@@ -131,6 +169,7 @@ const Register = ({ refElement }: Props) => {
           </form>
         </GridItem>
       </SimpleGrid>
+      
     </Box>
   );
 };
