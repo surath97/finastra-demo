@@ -1,6 +1,7 @@
 import {
   Box,
   GridItem,
+  Heading,
   HStack,
   Image,
   List,
@@ -21,8 +22,8 @@ const EventOverview = ({ refElement }: Props) => {
 
   // Animation variants for the first GridItem (from left)
   const leftAnimation = {
-    hidden: { opacity: 0, x: -100, y: 100 },
-    visible: { opacity: 1, x: 0, y: 0, transition: { duration: 0.8 } },
+    hidden: { opacity: 0, x: -100, },
+    visible: { opacity: 1, x: 0, y: 0, transition: { duration: 1 } },
   };
 
   // Animation variants for the second GridItem (from bottom)
@@ -50,10 +51,11 @@ const EventOverview = ({ refElement }: Props) => {
           variants={leftAnimation}
           whileInView="visible"
           viewport={{ once: false }}
+          paddingBottom={5}
         >
-          <h1 className="!text-[3.5rem] !font-extrabold !bg-linear-to-r from-indigo-500 via-purple-500 to-pink-500 !bg-clip-text !text-transparent">
+          <Heading textStyle={{ base: '3xl', lg: '4xl', xl:'6xl' }} className=" !font-extrabold !bg-linear-to-r from-indigo-500 via-purple-500 to-pink-500 !bg-clip-text !text-transparent">
             Event Overview
-          </h1>
+          </Heading>
         </MotionGridItem>
 
         <MotionGridItem
@@ -62,9 +64,9 @@ const EventOverview = ({ refElement }: Props) => {
           variants={bottomAnimation}
           whileInView="visible"
           viewport={{ once: false }}
-          className="!border-8 !rounded-xl !border-amber-400 !shadow-xl !shadow-amber-500"
+          className="!border-2 !rounded-xl !border-amber-400 shadow-lg !shadow-amber-500"
         >
-          <p className="!text-justify !text-[20px] !p-5 !bg-linear-to-r to-purple-500/20">
+          <p className="!text-justify overview !p-5 !bg-linear-to-r to-purple-500/20">
             Join us on April 9th in Cairo, Egypt, for Finastra's Universal
             Banking Forum, "Reimagine Banking: Adapt. Evolve. Thrive." This
             exclusive event is designed to help you navigate and excel in the

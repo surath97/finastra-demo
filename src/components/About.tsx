@@ -61,7 +61,7 @@ const About = () => {
               whileInView='visible'
               viewport={{ once: false }}
             >
-              <Text color={'white'} className="!text-justify !text-[18px] !p-5 !bg-linear-to-r to-purple-500/20 !rounded-3xl">
+              <Text textStyle={{ lg: 'xl'}} color={'white'} className="!text-justify  !p-5 !bg-linear-to-r to-purple-500/20 !rounded-3xl">
                 Finastra is a global provider of financial services software applications across Lending, Payments, Treasury and Capital Markets, and Universal (retail and digital) Banking. Committed to unlocking the potential of people, businesses and communities everywhere, its vision is to accelerate the future of Open Finance through technology and collaboration, and its pioneering approach is why it is trusted by ~8,100 financial institutions, including 45 of the world's top 50 banks.
               </Text>
               <Text color={'white'} className="!p-5">For more information, visit www.finastra.com</Text>

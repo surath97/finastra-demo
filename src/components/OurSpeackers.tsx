@@ -54,10 +54,11 @@ const OurSpeackers = () => {
 
           <GridItem key={index} className="hover:scale-110 transition-all duration-300">
             
-            <Card.Root minHeight={'280px'} bg={'bg.inverted'} flexDirection={{ sm:'column', lg: 'row'}} overflow="hidden" variant='outline' className="!bg-linear-to-r to-purple-500/20 !border-2 !border-gray-500/50" >
+            <Card.Root minHeight={'280px'} bg={'bg.inverted'} flexDirection={{ sm:'row', md: 'row', lg: 'row'}} overflow="hidden" variant='outline' className="!bg-linear-to-r to-purple-500/20 !border-2 !border-gray-500/50" >
               <Image
                 objectFit="cover"
-                maxW="200px"
+                // maxW="200px"
+                maxW={{ sm: '40%', md: '35%', lg: '45%'}}
                 src={sp.logo}
                 alt={sp.name}
               />

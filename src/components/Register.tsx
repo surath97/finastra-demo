@@ -16,6 +16,7 @@ import axios from "axios";
 import { useState, type Ref } from "react";
 import { useForm, type FieldErrors, type FieldValues } from "react-hook-form";
 import { Toaster, toaster } from "./ui/toaster"
+import { motion } from "framer-motion";
 
 interface Props {
   refElement?: Ref<HTMLDivElement>;
@@ -66,9 +67,32 @@ const Register = ({ refElement }: Props) => {
     console.log(err);
   }
 
+  // -------- Animations --------------
+  const MotionBox = motion(Box);
+  
+  
+    const topAnimationBox = {
+      hidden: { opacity: 0, y: 100 },
+      visible: {
+        opacity: 1, x: 0, y: 0, transition: { 
+          duration: 0.8,
+          delay: 0.3
+        } 
+      },
+    };
+
   return (
 
-    <Box className="!bg-linear-to-r from-indigo-300 via-purple-300 to-pink-300" paddingY='100px' ref={refElement}>
+    <MotionBox 
+      className="!bg-linear-to-r from-indigo-300 via-purple-300 to-pink-300" 
+      paddingY='100px' 
+      ref={refElement}
+      // --------------
+      initial='hidden'
+      variants={topAnimationBox}
+      whileInView='visible'
+      viewport={{ once: false }}
+    >
 
       <Toaster />
 
@@ -170,7 +194,7 @@ const Register = ({ refElement }: Props) => {
         </GridItem>
       </SimpleGrid>
       
-    </Box>
+    </MotionBox>
   );
 };
 

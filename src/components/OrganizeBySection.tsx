@@ -8,10 +8,10 @@ const OrganizeBySection = () => {
   const MotionImage = motion(Image);
 
     const topAnimationLogo = {
-    hidden: { opacity: 0, y: -100 },
+    hidden: { opacity: 0, y: -150 },
     visible: {
       opacity: 1, x: 0, y: 0, transition: { 
-        duration: 1,
+        duration: 2,
         delay: 0.1
       } 
     },
@@ -32,6 +32,11 @@ const OrganizeBySection = () => {
           whileInView='visible' 
           viewport={{ once: false }}
         />
+
+        <span className="relative flex size-4">
+          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-purple-500 opacity-75"></span>
+          <span className="relative inline-flex size-3 rounded-full bg-purple-500"></span>
+        </span>
 
         <p className="!text-white !text-[80px]/24 !text-center !font-semibold !tracking-tight">
           Reimagine Banking:

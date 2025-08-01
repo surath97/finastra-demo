@@ -14,3 +14,22 @@
 .bg_gradient_1 {
   background: linear-gradient(84deg, #1c015d -7.52%, #8045ce 108.41%);
 }
+
+
+@media (max-width: 425px) {
+  p.overview {
+    font-size: 14px; /* mobile */
+  }
+}
+
+@media (max-width: 768px) {
+  p.overview {
+    font-size: 16px; /* tablet */
+  }
+}
+
+@media (min-width: 1280px) {
+  p.overview {
+    font-size: 20px;
+  }
+}
